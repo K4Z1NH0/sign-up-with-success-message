@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --Pink: hsl(346, 100%, 66%);
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--Dark-Slate-Grey);
+}
+
+main .card{
+    color: var(--Dark-Slate-Grey);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--White);
+}
+
+main .card .icon-success{
+    margin-bottom: 1rem;
+    width: 3rem;
+}
+
+main .card .text{
+    padding: 2rem;
+}
+
+main .card .text .title{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+main .card .text .sub-title{
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+main .card .text .sub-title span{
+    font-weight: 700;
+}
+
+main .card .email{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main .card .email button{
+    font-weight: 700;
+    color: var(--White);
+    margin-top: 1rem;
+    padding: 1.3rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: var(--Charcoal-Grey);
+    transition: 0.3s;
+}
+
+main .card .email button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(50deg, var(--Pink), var(--Tomato));
+    box-shadow: 0 0 8px var(--Tomato), 0 0 5px var(--Tomato), 0 0 0px var(--Pink);
+    transition: 0.3s;
+}
+
+@media (max-width: 425px){
+    main .card{
+        width: 25rem;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    main .card .email button{
+        margin-top: 8rem;
+    }
+    
+}
+
+@media (max-width: 375px){
+    main .card{
+        width: 21.4rem;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 320px){
+    main .card{
+        width: 18.5rem;
+        height: 100vh;
+    }
+}

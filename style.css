@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --Pink: hsl(346, 100%, 66%);
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Light-pink : hsl(0, 100%, 97%);
+    --Red: hsl(0, 75%, 62%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--Dark-Slate-Grey);
+}
+
+main .card{
+    color: var(--Dark-Slate-Grey);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    height: 25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: var(--White);
+}
+
+main .card .ilustration{
+    height: 25rem;
+}
+
+main .card .ilustration-mobile{
+    display: none;
+}
+
+main .card .text{
+    padding: 2rem;
+}
+
+main .card .text .title{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+main .card .text .sub-title{
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+main .card .list .div-list{
+    display: flex;
+    padding-bottom: 0.8rem;
+}
+
+main .card .list .div-list p{
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+    font-weight: 400;
+}
+
+
+main .card .email{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main .card .email h3{
+    font-size: 0.7rem;
+}
+
+main .card .email #emailInput{
+    outline: none;
+    margin-top: 0.5rem;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+    border: 1px solid;
+}
+
+.email-flex{
+    justify-content: space-between;
+    display: flex;
+}
+
+/* Style do texto de erro */
+.msgerror{
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--Red); 
+}
+
+/* Cor da borda do input quando inválido */
+.invalid-input{
+    color: var(--Red);
+    background-color: var(--Light-pink); 
+    border: solid 1px var(--Red); 
+}
+
+main .card .email button{
+    color: var(--White);
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: var(--Charcoal-Grey);
+    transition: 0.3s;
+}
+
+main .card .email button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(50deg, var(--Pink), var(--Tomato));
+    box-shadow: 0 0 8px var(--Tomato), 0 0 5px var(--Tomato), 0 0 0px var(--Pink);
+    transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+    main .card{
+        border-radius: 1.5rem;
+        padding: 0.8rem;
+        height: 25rem;
+    }
+    
+    main .card .text{
+        padding: 1.8rem;
+    }
+    
+    main .card .text .title{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        width: 15rem;
+    }
+    
+    main .card .text .sub-title{
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 425px){
+    main .card{
+        flex-direction: column;
+        border-radius: 0px;
+        padding: 0rem;
+        height: 50rem;
+        width: 26.5rem;
+    }
+
+    main .card .ilustration{
+        display: none;
+    }
+
+    main .card .ilustration-mobile{
+        display: flex;
+        height: 23.1rem;
+    }
+
+    main .card .text{
+        position: absolute;
+        top: 50%;
+        padding: 1.8rem;
+    }
+    
+    main .card .text .title{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        width: 15rem;
+    }
+    
+    main .card .text .sub-title{
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 375px){
+    main .card{
+        height: 50rem;
+        width: 23.5rem;
+    }
+
+    main .card .ilustration-mobile{
+        height: 24rem;
+    }
+
+    main .card .text{
+        top: 45%;
+    }
+
+}
+
+@media (max-width: 320px){
+    main .card{
+        width: 20rem;
+        height: 45rem;
+    }
+    main .card .ilustration-mobile{
+        height: 20rem;
+    }
+
+    main .card .text{
+        top: 40%;
+    }
+}
