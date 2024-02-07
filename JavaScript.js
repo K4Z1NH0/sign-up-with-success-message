@@ -5,7 +5,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
     
     if (emailRegex.test(emailInput)) {
         // Email é válido, redirecionar para a página de agradecimento
-        window.location.href = '/thanks/thanks.html';
+        window.location.href = 'thanks/thanks.html';
     } else {
         // Email não é válido, mostrar mensagem de erro no placeholder e alterar cor do input
         document.getElementById('msgemail').innerHTML = 'Valid email required';
